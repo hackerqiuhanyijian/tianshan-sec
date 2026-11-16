@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="本地填写网络安全攻防社团入社申请表，并生成可打印 PDF。">
+<title>网络安全攻防社团入社申请表 · 在线填写</title>
+<style>
+:root{color-scheme:dark;--bg:#08131f;--panel:#0d1c2b;--line:#294253;--text:#e8f1f5;--muted:#9aafbd;--mint:#72f0c1;--blue:#73baff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.65 Inter,"PingFang SC","Microsoft YaHei",sans-serif}.wrap{width:min(1120px,calc(100% - 32px));margin:32px auto 64px}.head{margin:0 0 22px}.brand{display:flex;align-items:center;gap:12px;margin-bottom:18px;font-weight:700;letter-spacing:.04em}.logo{width:38px;height:38px;border:1px solid #72f0c188;border-radius:11px;display:grid;place-items:center;color:var(--mint);font:700 18px ui-monospace,monospace;box-shadow:inset 0 0 20px #72f0c11a}.eyebrow{font:12px ui-monospace,monospace;letter-spacing:.12em;color:var(--mint)}h1{font-size:clamp(26px,4vw,38px);line-height:1.25;margin:8px 0}.lead,.hint{color:var(--muted)}.layout{display:grid;grid-template-columns:minmax(310px,430px) minmax(0,1fr);gap:20px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}.panel h2{font-size:18px;margin:0 0 14px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:5px}.field.wide{grid-column:1/-1}label{font-size:13px;color:#c3d0d8}input,select,textarea{width:100%;border:1px solid #365166;border-radius:6px;padding:9px 10px;background:#08131f;color:var(--text);font:inherit;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--mint);box-shadow:0 0 0 2px #72f0c122}textarea{min-height:82px;resize:vertical}.actions{display:flex;gap:10px;margin-top:17px;flex-wrap:wrap}.btn{border:1px solid #365166;border-radius:7px;background:transparent;color:var(--text);padding:10px 14px;font:600 14px inherit;cursor:pointer}.btn.primary{background:var(--mint);border-color:var(--mint);color:#06140f}.btn:disabled{opacity:.55;cursor:wait}.preview{position:sticky;top:16px}.paper{padding:10px;background:#e7edf0;border-radius:8px;overflow:auto}canvas{display:block;width:100%;height:auto;background:#fff;box-shadow:0 4px 18px #0003}.hint{font-size:12px;margin:11px 2px 0}.privacy{font-size:12px;color:var(--mint);margin-top:14px}.footer{border-top:1px solid #ffffff16;color:var(--muted);font-size:12px;margin-top:24px;padding-top:16px}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}@media(max-width:850px){.layout{grid-template-columns:1fr}.preview{position:static}.fields{grid-template-columns:1fr 1fr}}@media(max-width:440px){.fields{grid-template-columns:1fr}.field.wide{grid-column:auto}.panel{padding:16px}}
+.footer-links{margin-bottom:12px}.footer-links a{display:inline-flex;align-items:center;gap:6px;padding:4px 0;color:var(--mint);text-decoration:none;text-underline-offset:4px}.footer-links a:hover{text-decoration:underline}.footer-links a:focus-visible{outline:2px solid var(--mint);outline-offset:4px;border-radius:2px}
+</style>
+</head>
+<body><main class="wrap">
+<header class="head"><div class="brand"><span class="logo">TS</span><span>天山网安攻防社</span></div><h1>网络安全攻防社团入社申请表</h1><p class="lead">在线填写后，在浏览器本地生成并下载 PDF。打印前请核对信息，并手写签名。</p></header>
+<div class="layout"><section class="panel"><h2>填写申请信息</h2><form id="form"><div class="fields">
+<div class="field"><label for="name">姓名</label><input id="name" name="name" autocomplete="name" maxlength="24"></div>
+<div class="field"><label for="gender">性别</label><select id="gender" name="gender"><option value=""></option><option>男</option><option>女</option></select></div>
+<div class="field"><label for="grade">年级编号</label><input id="grade" name="grade" maxlength="30"></div>
+<div class="field"><label for="studentId">学号</label><input id="studentId" name="studentId" maxlength="30"></div>
+<div class="field"><label for="className">学院与班级</label><input id="className" name="className" maxlength="40" placeholder="例：学院｜班级"></div>
+<div class="field"><label for="type">类型</label><select id="type" name="type"><option value=""></option><option>高职</option><option>本科</option><option>专升本</option></select></div>
+<div class="field"><label for="phone">联系电话</label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="30"></div>
+<div class="field"><label for="email">邮箱</label><input id="email" name="email" type="email" autocomplete="email" maxlength="60"></div>
+<div class="field"><label for="politics">政治面貌</label><input id="politics" name="politics" maxlength="20"></div>
+<div class="field"><label for="nickname">网安昵称</label><input id="nickname" name="nickname" maxlength="24"></div>
+<div class="field wide"><label for="reason">申请理由</label><textarea id="reason" name="reason" maxlength="500"></textarea></div>
+<div class="field wide"><label for="skills">个人特长及相关经历</label><textarea id="skills" name="skills" maxlength="700"></textarea></div>
+
+</div><div class="actions"><button class="btn primary" id="download" type="button">生成并下载 PDF</button><button class="btn" type="reset">清空</button></div><div class="privacy">隐私说明：填写内容只在当前浏览器中处理，不会上传或保存到服务器。</div></form></section>
+<aside class="panel preview"><h2>打印预览</h2><div class="paper"><canvas id="paper" aria-label="申请表打印预览"></canvas></div><p class="hint">A4 纵向 · 300 DPI PDF · 签名及审批栏保留空白供打印后填写</p></aside></div>
+<footer class="footer"><nav class="footer-links" aria-label="社团相关链接"><a href="https://hackerqiuhanyijian.github.io/tianshan-sec/" target="_blank" rel="noopener noreferrer" aria-label="认识天山网安攻防社（在新标签页打开）">认识天山网安攻防社 <span aria-hidden="true">↗</span></a></nav><div class="footer-inner"><span>© 2026 天山网安攻防社 · 新疆天山职业技术大学</span><span>在合法授权的边界内，探索网络安全</span></div></footer></main>
+<script>
+(()=>{'use strict';
+const W=794,H=1123,SCALE=3.125,canvas=document.getElementById('paper'),ctx=canvas.getContext('2d'),form=document.getElementById('form');
+canvas.width=Math.round(W*SCALE);canvas.height=Math.round(H*SCALE);
+const val=id=>document.getElementById(id).value.trim();
+function draw(){ctx.setTransform(SCALE,0,0,SCALE,0,0);ctx.fillStyle='#fff';ctx.fillRect(0,0,W,H);ctx.fillStyle='#111';ctx.strokeStyle='#222';ctx.lineWidth=.8;ctx.textBaseline='middle';
+const font=(size,bold=false)=>`${bold?'bold ':''}${size}px "Songti SC","SimSun","STSong","Noto Serif CJK SC",serif`;
+function text(t,x,y,size=13,bold=false,align='left'){ctx.font=font(size,bold);ctx.textAlign=align;ctx.fillStyle='#111';ctx.fillText(String(t||''),x,y)}
+function line(x1,y1,x2,y2,width=.8){ctx.beginPath();ctx.lineWidth=width;ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke()}
+function wrap(t,x,y,maxWidth,lineH,size=13,maxLines=99){ctx.font=font(size);ctx.textAlign='left';let row='',rows=[];for(const ch of String(t||'')){if(ch==='\n'){rows.push(row);row='';continue}if(ctx.measureText(row+ch).width>maxWidth&&row){rows.push(row);row=ch}else row+=ch}if(row)rows.push(row);rows.slice(0,maxLines).forEach((r,i)=>text(r,x,y+i*lineH,size));}
+text('网络安全攻防社团入社申请表',W/2, forty(48),23,true,'center');
+text('一、基本信息',64,92,15,true);
+const x=64,y=112,tw=666,rh=34,cw=[126,207,92,241];let yy=y;
+const rows=[['姓名',val('name'),'性别',val('gender')],['年级编号',val('grade'),'学号',val('studentId')],['学院与班级',val('className'),'类型',val('type')],['联系电话',val('phone'),'邮箱',val('email')],['政治面貌',val('politics'),'网安昵称',val('nickname')]];
+rows.forEach(row=>{let xx=x;for(let c=0;c<4;c++){let ww=cw[c];ctx.strokeRect(xx,yy,ww,rh);if(c%2===0)text(row[c],xx+9,yy+rh/2,12);else text(row[c],xx+7,yy+rh/2,12);xx+=ww}yy+=rh});
+text('二、申请理由',64,yy+27,15,true);const rTop=yy+43,rBottom=rTop+82;ctx.strokeRect(x,rTop,tw,rBottom-rTop);wrap(val('reason'),x+9,rTop+12,tw-18,18,12,4);
+text('三、个人特长及相关经历',64,rBottom+27,15,true);const sTop=rBottom+43,sBottom=sTop+105;ctx.strokeRect(x,sTop,tw,sBottom-sTop);wrap(val('skills'),x+9,sTop+12,tw-18,18,12,5);
+text('四、入社承诺',64,sBottom+27,15,true);wrap('本人自愿申请加入网络安全攻防社团，认同社团宗旨，愿意遵守国家相关法律、社团章程及学校规章制度，自觉维护社团荣誉，积极参与社团活动，履行成员义务。',64,sBottom+52,666,21,12,3);
+text('承诺人签名：',64,sBottom+119,12);line(143,sBottom+132,300,sBottom+132);text('年　 月　 日',665,sBottom+119,12,'','right');
+const fifth=sBottom+168;text('五、申请人签名',64,fifth,15,true);let ty=fifth+16;[164,162,132,208].reduce((xx,w,i)=>{ctx.strokeRect(xx,ty,w,36);let labels=['申请人签名','','申请日期','年　 月　 日'];if(labels[i])text(labels[i],xx+8,ty+18,12);return xx+w},64);
+const sixth=ty+62;text('六、审批意见',64,sixth,15,true);let ay=sixth+16;[[220,446],[220,446]].forEach((row,i)=>{ctx.strokeRect(64,ay+i*37,220,37);ctx.strokeRect(284,ay+i*37,446,37);text(i===0?'社团负责人意见':'团支部书记意见',73,ay+i*37+18,12)});
+const notesY=ay+90;wrap('填表说明：1. 请用黑色签字笔如实填写，字迹工整；2.「类型」栏填写：高职、本科、专升本；3.「年级编号」「学号」请按学籍信息填写。',64,notesY,666,18,10,3);
+}
+function forty(n){return n}
+function pdfBlob(jpeg){const enc=new TextEncoder(),parts=[],offsets=[0];let length=0;function add(v){const b=typeof v==='string'?enc.encode(v):v;parts.push(b);length+=b.length}function obj(n,body){offsets[n]=length;add(`${n} 0 obj\n${body}\nendobj\n`)}
+add('%PDF-1.4\n');obj(1,'<< /Type /Catalog /Pages 2 0 R >>');obj(2,'<< /Type /Pages /Kids [3 0 R] /Count 1 >>');obj(3,'<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>');offsets[4]=length;add(`4 0 obj\n<< /Type /XObject /Subtype /Image /Width ${canvas.width} /Height ${canvas.height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpeg.length} >>\nstream\n`);add(jpeg);add('\nendstream\nendobj\n');const pageContent='q\n595.28 0 0 841.89 0 0 cm\n/Im0 Do\nQ\n';obj(5,`<< /Length ${enc.encode(pageContent).length} >>\nstream\n${pageContent}endstream`);const xref=length;add('xref\n0 6\n0000000000 65535 f \n');for(let i=1;i<=5;i++)add(String(offsets[i]).padStart(10,'0')+' 00000 n \n');add(`trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`);return new Blob(parts,{type:'application/pdf'})}
+form.addEventListener('input',draw);form.addEventListener('change',draw);form.addEventListener('reset',()=>setTimeout(draw));document.getElementById('download').addEventListener('click',async e=>{const btn=e.currentTarget;btn.disabled=true;btn.textContent='正在生成…';try{draw();const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',.96));if(!blob)throw Error('无法生成页面图像');const pdf=pdfBlob(new Uint8Array(await blob.arrayBuffer()));const a=document.createElement('a');a.href=URL.createObjectURL(pdf);a.download='网络安全攻防社团入社申请表.pdf';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),30000)}catch(err){alert('PDF 生成失败，请换用最新版 Chrome、Edge 或 Firefox 后重试。');console.error(err)}finally{btn.disabled=false;btn.textContent='生成并下载 PDF'}});draw();
+})();
+</script></body></html>
+
+
